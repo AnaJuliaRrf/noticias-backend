@@ -80,6 +80,24 @@ app.get("/", (req, res) => {
   });
 });
 
+// DELETE: excluir uma notícia pelo ID
+app.delete("/noticias/:id", (req, res) => {
+  const { id } = req.params;
+  const index = noticias.findIndex(n => n.id == id);
+
+  if (index === -1) {
+    return res.status(404).json({ erro: "Notícia não encontrada para exclusão" });
+  }
+
+  // Remove o item do array
+  const noticiaRemovida = noticias.splice(index, 1);
+
+  res.json({
+    mensagem: "Notícia removida com sucesso",
+    noticia: noticiaRemovida[0]
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`Backend rodando na porta ${PORT}`);
   console.log(`CORS habilitado para: ${corsOptions.origin}`);
