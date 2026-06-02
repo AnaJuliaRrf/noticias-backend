@@ -13,7 +13,7 @@ app.use(express.json());
 const corsOptions = {
   origin: [
     "https://noticias-frontend-six.vercel.app/", // URL do seu front na Vercel
-    "https://special-fortnight-7vw5pwqv7pg4c4ww-5000.app.github.dev/" // URL do seu front no Codespaces
+    "https://friendly-computing-machine-jj97q96jrrvxc5v9q-8080.app.github.dev" // URL do seu front no Codespaces
   ],
   methods: "GET,POST,PUT,DELETE",
   allowedHeaders: "Content-Type,Authorization"
