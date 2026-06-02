@@ -17,7 +17,7 @@ const corsOptions = {
   ],
   methods: "GET,POST,PUT,DELETE",
   allowedHeaders: "Content-Type,Authorization"
-};
+}; 
 app.use(cors(corsOptions));
 
 // Banco de dados fictício (Mantido do seu código original)
